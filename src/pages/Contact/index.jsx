@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./index.module.scss";
-import { FaEnvelopeOpenText, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { FaEnvelopeOpenText, FaWhatsapp } from "react-icons/fa";
 import ContactCard from "../../components/ContactCard";
-import contact from "../../assets/contact.jpeg";
+
 import { BiSolidDirections } from "react-icons/bi";
 import Title from "../../components/Title";
 import useNav from "../../hooks/use-nav";

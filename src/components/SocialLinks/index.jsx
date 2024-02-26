@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaSnapchatGhost,
-  FaInstagram,
-  FaGithub,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaInstagram, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import style from "./index.module.scss";
 
 const items = [
