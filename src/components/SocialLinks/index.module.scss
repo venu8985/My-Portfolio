@@ -1,0 +1,36 @@
+.socialLinks {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    background-image: linear-gradient(to right, #dd5e89 0%, #f7bb97 100%),
+      radial-gradient(circle at top left, #dd5e89, #f7bb97);
+    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+
+    & > a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &:hover {
+      background-image: linear-gradient(#ffffff, #ffffff),
+        radial-gradient(circle at top left, #dd5e89, #f7bb97);
+      border: 2px solid #f7bb97;
+    }
+
+    &:hover a {
+      color: #222222;
+    }
+  }
+}

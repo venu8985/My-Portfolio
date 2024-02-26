@@ -1,0 +1,122 @@
+@import "../../../public/style/breakpoints";
+
+@font-face {
+  font-family: "Handwritten";
+  src: local("Handwritten"), url("../../fonts/BrightChalk.ttf") format("woff");
+}
+@font-face {
+  font-family: "Handwritten2";
+  src: local("Handwritten2"),
+    url("../../fonts/GirlySideDemoRegular.ttf") format("woff");
+}
+
+.contactCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-image: linear-gradient(to right, #dd5e89 0%, #f7bb97 100%),
+    radial-gradient(circle at top left, #dd5e89, #f7bb97);
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  column-gap: 20px;
+
+  @include if-device(phone) {
+    padding: 10px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  &__left {
+    width: 10%;
+    @include if-device(phone) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 10px;
+      margin-bottom: 5px;
+    }
+    &__icon {
+      font-size: 30px;
+      height: 50px;
+      width: 50px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      @include if-device(phone) {
+        font-size: 30px;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        bottom: 50%;
+        left: 20px;
+        transform: translate(-50%);
+        border: 1px solid #dd5e89;
+        box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+      }
+    }
+  }
+
+  &__right {
+    width: 90%;
+    &__para {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      font-family: "Handwritten", sans-serif;
+      @include if-device(phone) {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+      }
+    }
+
+    &__para1 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      display: none;
+      font-family: "Handwritten", sans-serif;
+      @include if-device(desktop) {
+        display: none;
+      }
+      @include if-device(tablet) {
+        display: none;
+      }
+      @include if-device(laptop) {
+        display: none;
+      }
+      @include if-device(phone) {
+        font-size: 16px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__link {
+      color: #fff;
+      font-family: "Handwritten", sans-serif;
+      @include if-device(laptop) {
+        font-size: 20px;
+      }
+      @include if-device(phone) {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

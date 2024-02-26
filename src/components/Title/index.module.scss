@@ -1,0 +1,101 @@
+@import "../../../public/style/breakpoints";
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__menu {
+    width: 50px;
+    height: 35px;
+    position: relative;
+    display: none;
+    background-image: linear-gradient(to right, #dd5e89 0%, #f7bb97 100%),
+      radial-gradient(circle at top left, #dd5e89, #f7bb97);
+    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    border-radius: 5px;
+
+    &__menuTab {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &__line1,
+      &__line2,
+      &__line3 {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        margin: 4px 0;
+        transition: all 0.3s ease-in-out;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      &__line2 {
+        transform: translateX(-50%);
+        transition: all 0.3s ease-in-out;
+        top: 20px;
+      }
+
+      &__line3 {
+        top: 28px;
+      }
+
+      &__line4 {
+        transform: rotate(45deg);
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        left: 10px;
+        border-radius: 10px;
+      }
+
+      &__line5 {
+        transform: translateX(7px);
+        transition: all 0.1s ease-in-out;
+        opacity: 0;
+      }
+
+      &__line6 {
+        transform: rotate(-45deg);
+        height: 3px;
+        width: 30px;
+        background-color: #fff;
+        margin: 4px 0;
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: 19px;
+        left: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    @include if-device(desktop) {
+      display: none;
+    }
+    @include if-device(tablet) {
+      display: none;
+    }
+    @include if-device(laptop) {
+      display: none;
+    }
+    @include if-device(phone) {
+      display: block;
+    }
+  }
+}

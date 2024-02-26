@@ -1,0 +1,127 @@
+.workCard {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  clear: both;
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  opacity: 0;
+
+  &__innerTimeline {
+    position: relative;
+    margin-left: -20px;
+
+    &__icon {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: #2c98f0;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 0 0 0 5px #f2f3f7;
+      line-height: 40px;
+      float: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+      background-image: linear-gradient(to right, #dd5e89 0%, #f7bb97 100%),
+        radial-gradient(circle at top left, #dd5e89, #f7bb97);
+    }
+
+    &__timeline {
+      position: relative;
+      background: #fff;
+      padding: 1.5em;
+      margin-left: 60px;
+      background-clip: padding-box;
+      border-radius: 10px;
+      box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+
+      &__left {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        &__companyDet {
+          &__designation {
+            margin-bottom: 10px;
+            & > span {
+              font-size: 16px;
+              font-weight: 500;
+              margin-left: 10px;
+              color: #d70026;
+            }
+          }
+
+          &__company {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #dd5e89;
+            color: #fff;
+            font-size: 16px;
+            padding: 3px 10px;
+            display: inline-block;
+            margin-bottom: 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            background-color: #252525;
+            opacity: 0.8;
+          }
+
+          &__location {
+            margin-bottom: 20px;
+            // color: #d70026;
+            font-weight: 600;
+          }
+        }
+
+        &__companyImg {
+          &__logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            // border: 1px solid #DD5E89;
+
+            & > img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      &__desc {
+        line-height: 25px;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 9px 9px 9px 0;
+        border-color: transparent #fff transparent transparent;
+        left: 0;
+        top: 10px;
+        margin-left: -9px;
+      }
+    }
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

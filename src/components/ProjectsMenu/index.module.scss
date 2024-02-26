@@ -1,0 +1,46 @@
+@import "../../../public/style/breakpoints";
+
+.projectsMenu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+
+  &__li {
+    padding: 15px 20px;
+    background-image: linear-gradient(to right, #dd5e89 0%, #f7bb97 100%),
+      radial-gradient(circle at top left, #dd5e89, #f7bb97);
+    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+    font-weight: 600;
+
+    @include if-device(tablet) {
+      width: 100px;
+      font-size: 14px;
+    }
+    @include if-device(phone) {
+      width: 75px;
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    &:hover {
+      background-image: linear-gradient(#ffffff, #ffffff),
+        radial-gradient(circle at top left, #dd5e89, #f7bb97);
+      border: 1px solid #f7bb97;
+      color: #222222;
+    }
+  }
+}
+
+.active {
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(circle at top left, #dd5e89, #f7bb97);
+  border: 1px solid #f7bb97;
+  color: #222222;
+}

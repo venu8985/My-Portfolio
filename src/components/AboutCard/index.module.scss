@@ -1,0 +1,47 @@
+.aboutCard {
+  padding: 20px 30px 25px 40px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  width: 100%;
+  background-image: linear-gradient(to right, #dd5e89 0%, #f7bb97 100%),
+    radial-gradient(circle at top left, #dd5e89, #f7bb97);
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border: 1px solid #eee;
+    z-index: -1;
+    border-radius: 10px;
+    transform: rotate(0deg);
+    transition: all 0.35s ease;
+  }
+
+  &:hover::after {
+    top: -6px;
+    left: 6px;
+    right: -6px;
+    bottom: 6px;
+    transform: rotate(4deg);
+  }
+
+  & > h1 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  & > p {
+    text-transform: uppercase;
+    color: #fff;
+  }
+}

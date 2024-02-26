@@ -1,0 +1,42 @@
+@import "../../../public/style/breakpoints";
+.app {
+  height: 100vh;
+  // padding: 10px;
+  display: flex;
+  align-items: center;
+
+  &__nav {
+    height: calc(100% - 10px);
+    @include if-device(phone) {
+      display: none;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    // border-radius: 10px;
+    height: 100%;
+    overflow: hidden;
+
+    &__pages {
+      background-color: #fff;
+      background-image: url("../../assets/body.webp");
+      background-position: right left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: -40px;
+      height: calc(100% - 10px);
+      width: calc(100% - 5px);
+      text-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+      position: relative;
+      z-index: 0;
+
+      @include if-device(phone) {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

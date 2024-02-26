@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Handwritten";
+  src: local("Handwritten"), url("../../fonts/BrightChalk.ttf") format("woff");
+}
+
+.li {
+  position: relative;
+  cursor: pointer;
+  width: calc(100% - 15px);
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  height: 60px;
+  margin: 15px 20px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: #000;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+
+    &__name {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-weight: 600;
+
+      &__para {
+        font-size: 18px;
+        margin-left: 10px;
+        font-family: "Handwritten", sans-serif;
+      }
+    }
+  }
+}
