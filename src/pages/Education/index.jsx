@@ -13,14 +13,14 @@ const eduObj = [
     id: 1,
     icon: <FaGraduationCap />,
     stream: "B.Tech (CSE)",
-    address: "NBKRIST, Vidyanage, Gudur",
+    address: "NBKRIST, Vidyanagar, Gudur",
     year: "2019 - 2023",
   },
   {
     id: 2,
     icon: <FaGraduationCap />,
     stream: "Itermediate (MPC)",
-    address: "DLP Srichaitanya Jr college, Nellore",
+    address: "DLP Sri Chaitanya Jr college, Nellore",
     year: "2017 - 2019",
   },
   {
